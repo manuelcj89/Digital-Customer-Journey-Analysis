@@ -2,9 +2,9 @@
 
 ## Overview
 
-This project analyses online shopping session data to investigate what factors are associated with customer conversion.
+This project analyses 12,330 online shopping sessions to investigate what factors are associated with customer conversion.
 
-The analysis uses SQL and Python to explore conversion performance across:
+The analysis uses SQL, Python/Pandas and statistical testing to explore conversion performance and suggest evidence-based recommendations across:
 
 - Visitor type
 - Traffic source
@@ -19,14 +19,13 @@ The aim is to demonstrate practical skills in **SQL, Python, data cleaning, expl
 
 ## Key Findings
 
-- Overall conversion rate: **15.47%** (1,908 of 12,330 sessions)
-- New visitors converted at nearly double the rate of returning visitors
-  (24.91% vs 13.93%) — a statistically significant difference (chi-square, p < 0.001)
-- November had both the highest conversion rate (25.35%) and high session
-  volume, consistent with Black Friday/Cyber Monday activity
-- The weekday/weekend effect on conversion reverses depending on visitor
+- **Overall conversion rate:** 15.47% (1,908 of 12,330 sessions)
+- **Visitor Type** New visitors converted at nearly double the rate of returning
+  visitors (24.91% vs 13.93%) — a statistically significant difference (chi-square, p < 0.001)
+- **Seasonality:** November had both the highest conversion rate (25.35%) and high     session volume while December fell to 12.51%
+- **Weekday/weekend:** The pattern on conversion reverses depending on visitor
   type — significant for returning visitors, not for new visitors
-- 125 duplicate records were investigated and found to represent a
+- **Data quality:** 125 duplicate records were investigated and found to represent a
   distinct low-engagement session pattern rather than a data error
 
 
@@ -41,7 +40,6 @@ The analysis focuses on several questions:
 5. Does conversion performance vary by month or day of the week?
 6. Are there data-quality issues that could affect the analysis?
 7. What insights could be investigated further with additional customer and commercial data?
-
 
 ## Dataset
 
