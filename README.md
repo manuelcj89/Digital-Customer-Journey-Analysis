@@ -2,9 +2,9 @@
 
 ## Overview
 
-This project analyses 12,330 online shopping sessions to investigate what factors are associated with customer conversion.
+This project analyses 12,330 online shopping sessions to identify factors associated with customer conversion and translate the findings into potential areas for commercial investigation.
 
-The analysis uses SQL, Python/Pandas and statistical testing to explore conversion performance and suggest evidence-based recommendations across:
+The analysis combines SQL, Python/Pandas and statistical testing, covering visitor behaviour, traffic sources, customer segments and trends over different time-periods.
 
 - Visitor type
 - Traffic source
@@ -25,9 +25,35 @@ The aim is to demonstrate practical skills in **SQL, Python, data cleaning, expl
 - **Seasonality:** November had both the highest conversion rate (25.35%) and high     session volume while December fell to 12.51%
 - **Weekday/weekend:** The pattern on conversion reverses depending on visitor
   type — significant for returning visitors, not for new visitors
-- **Data quality:** 125 duplicate records were investigated and found to represent a
-  distinct low-engagement session pattern rather than a data error
+- **Data quality:** 125 duplicate records were identified and investigated. They shared a distinctive low-engagement pattern, including unusual BounceRate/ExitRate values, but the dataset does not establish whether these represent a specific analytics-system behaviour or a data-quality issue.
 
+## Recommendations
+
+- **Investigate why returning visitors convert at a notably lower rate
+  than new visitors.** The gap is large and consistent enough to be
+  worth exploring further e.g. through site search behaviour, user 
+  research etc. rather than assumed to be expected.
+
+- **Treat traffic-source conversion differences as a starting point for
+  further investigation when considering budget allocation.**
+  Conversion rate alone doesn't account for cost, volume, or margin per
+  channel. Combining these findings with marketing spend data would be
+  needed before drawing conclusions about where to prioritise.
+
+- **Explore what may explain the November conversion peak.** 
+  Potentially seasonal demand, promotional activity, or another factor
+  not captured in this dataset. A single year of data cannot confirm
+  whether this is a recurring pattern.
+
+- **Treat the weekday/weekend difference by visitor type as a
+  hypothesis for new visitors specifically.** 
+  This pattern was statistically significant for returning visitors
+  only; the apparent new-visitor difference did not reach significance
+  and may reflect sampling variation.
+
+- **Request a mapping** for 'TrafficType', 'OperatingSystems', 'Browser'
+  and 'Region' codes from the data owner, to allow the traffic-source
+  findings to be interpreted against real-world channels.
 
 ## Business Questions
 
@@ -97,4 +123,4 @@ digital-customer-journey-analysis/
 │
 ├── README.md
 └── .gitignore
-└── requirement.txt
+└── requirements.txt
