@@ -100,6 +100,15 @@ The dataset is used for analytical and portfolio purposes.
 - **VS Code**
 - **Git / GitHub**
 
+## View the Analysis
+The full analysis is in
+[`notebooks/digital_customer_journey_analysis.ipynb`](notebooks/digital_customer_journey_analysis.ipynb).
+
+## Setup
+```bash
+pip install -r requirements.txt
+```
+Then open the notebook in Jupyter or VS Code.
 
 ## Project Structure
 
@@ -124,3 +133,12 @@ digital-customer-journey-analysis/
 ├── README.md
 └── .gitignore
 └── requirements.txt
+
+## Limitations
+
+- The dataset contains session-level rather than customer-level data, so
+  individual customer journeys cannot be tracked across sessions.
+- TrafficType codes are not mapped to descriptive acquisition channels.
+- The analysis identifies associations rather than causal relationships.
+- The dataset does not contain commercial variables such as acquisition
+  cost, revenue value or customer lifetime value.
